@@ -1,18 +1,6 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Companies from "./pages/Companies";
-import CompanyDetails from "./pages/CompanyDetails";
+import Home from './pages/Home';
+import './index.css';
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Companies />} />
-        <Route path="/company/:id" element={<CompanyDetails />} />
-      </Routes>
-    </BrowserRouter>
-  );
+export default function App() {
+  return <Home />;
 }
-
-export default App;

@@ -9,7 +9,7 @@ async function parseJob(req, res) {
     const job = await extractJobData(input.trim());
     res.json({ success: true, data: job });
   } catch (err) {
-    console.error(err);
+    console.error(err.message);
     res.status(500).json({ error: 'Extraction failed', message: err.message });
   }
 }
